@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800&display=swap');
+
+section {
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Urbanist', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 15px;
+  text-shadow: 10px 21px 10px rgba(0, 0, 0, 0.5);
+}
+
+span {
+  color: #29fd53;
+
+}
+
+@media(min-width:992px) {
+
+  h1 {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 60px;
+
+  }
+}
+
+.bg-image {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: scaleInfinite infinite 15s;
+  
+}
+
+@keyframes scaleInfinite {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navbar {
+
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.navbar .nav-link {
+
+  font-size: 18px;
+  margin-left: 30px;
+  position: relative;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-brand img {
+
+  max-height: 40px;
+}
+
+
+.navbar .nav-link::before {
+
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 0px;
+  height: 2px;
+  background-color: #f9f06d;
+  box-shadow: 0px 0px 8px #f9f06d;
+  transition: all .6s ease;
+  transform-origin: center;
+}
+
+.navbar .nav-item:hover .nav-link::before {
+
+  width: 100%;
+}
+
+.navbar .navbar-toggler {
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar .toggle-btn {
+
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 1100;
+}
+
+.navbar .toggle-btn .bar {
+
+  width: 25px;
+  height: 3px;
+  margin: 7px 0 7px auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f9f06d;
+}
+
+.navbar .toggle-btn .bar:nth-child(2) {
+
+  width: 35px;
+}
+
+.navbar #toggle-menu {
+
+  display: none;
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(2) {
+
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(1) {
+
+  -webkit-transform: translateY(12px) rotate(45deg);
+  -ms-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
+}
+
+.navbar #toggle-menu:checked+label.toggle-btn .bar:nth-child(3) {
+
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.modal-dialog {
+
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 85%;
+}
+
+.modal-dialog .modal-content {
+
+  background-color: #2a252e;
+}
+
+.modal-dialog .modal-header,
+.modal-dialog .modal-footer {
+
+  border: none;
+}
+
+.modal-dialog .modal-header img {
+
+  max-height: 40px;
+}
+
+.modal-dialog .modal-body {
+
+  padding-top: 65px;
+  background-color: #17161d;
+}
+
+.modal-dialog .nav-link {
+
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, .60);
+}
+
+.modal-dialog .nav-link i {
+
+  margin-right: 10px;
+  color: #f9f06d;
+}
+
+.dropdown-menu {
+
+  background-color: #2a252e;
+  color: #f9f06d;
+}
+
+.dropdown-item {
+
+  color: rgba(255, 255, 255, .60);
+}
+
+.modal-dialog .btn-secondary {
+
+  color: #2a252e;
+  background-color: #f9f06d;
+  border: none;
+}
+
+.section {
+  background: #1c1c1c;
+}
+.boton-cerrar{
+  color: #2a252e;
+    background-color: #f9f06d;
+    border: none;
+    width: 90%;
+    transition: all 0.5s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    backdrop-filter: blur(0.1rem);
+    border-radius: 0.5rem 2rem;
+    box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+}
+/* --------------productos------------------ */
+
+
+.fondo {
+  background-image: url("../imagenes/probando\ fondo\ neon.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  background-attachment: fixed;
+
+}
+.titulo-productos{
+  color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.parrafo-titulo{
+  color: white;
+}
+
+.contenedor-titulo-producto{
+  margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+}
+/* -------cards-------- */
+
+.card {
+  border-radius: .5rem 2rem;
+  box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+ transition: all .3s;
+
+} 
+.card-img-top{
+  border-radius: .5rem 2rem;
+}
+.btn-primary{
+  border-color: #ff0084; ;
+}
+/* .card:hover {
+  transform: scale(1.03); */
+
+
+
+.card-body {
+  transition: all .3s;
+  background: #ff0084;
+  background: -webkit-linear-gradient(to right, #33001b, #ff0084);
+  background: linear-gradient(to right, #33001b, #ff0084);
+  transition: all 0.5s ease;
+  border-radius: .5rem 2rem;
+  color: white;
+}
+  .btn {
+
+    color: white;
+    width: 90%;
+    transition: all 0.5s ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    backdrop-filter: blur(.1rem);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: .5rem 2rem;
+    box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn:hover {
+
+    background-image: linear-gradient(145deg, #ff00e1, #0000ff, #00d9ff);
+    transform: scale(1.03); 
+
+
+  }
+
+  
+/* ----------------carrito-------------------- */
+.col{
+    margin-bottom: 5%;
+}
+.boton {
+  width: 180px;
+  height: 60px;
+  background-image: linear-gradient(145deg, #ff00e1, #0000ff, #00d9ff);
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 1px 3px 0px rgb(139, 113, 255);
+  transition-duration: .3s;
+  margin: 40px ;
+}
+.boton:hover{
+  transform: scale(1.03); 
+}
+
+.cartIcon {
+  width: 14px;
+  height: fit-content;
+}
+
+.cartIcon path {
+  fill: white;
+}
+
+.boton:active {
+  transform: translate(2px ,0px);
+  box-shadow: 0px 1px 0px rgb(139, 113, 255);
+  padding-bottom: 1px;
+}
+
+
+.contenedor2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.contenedor2 .boton2 {
+  height: 50px;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 155px;
+}
+
+.contenedor2 .boton2 a {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.contenedor2 .boton2:hover a {
+  letter-spacing: 2px;
+}
+
+.contenedor2 .boton2 a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left,
+                rgba(255,255,255,0.15),
+                transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.contenedor2 .boton2:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.contenedor2 .boton2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 10px;
+  width: 30px;
+  background: rgb(249, 26, 1);
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.contenedor2 .boton2:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.contenedor2 .boton2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  height: 10px;
+  width: 30px;
+  background: rgb(255, 0, 0);
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.contenedor2 .boton2:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.contenedor2 .boton2:nth-child(1):before,
+.contenedor2 .boton2:nth-child(1)::after {
+  background: #ff0000;
+  box-shadow: 0 0 5px #ff00008a,
+    0 0 15px #ff2b2b,
+    0 0 30px #ff2b2b,
+    0 0 60px #ff2b2b;
+}
+
+.contenedor2 .boton2:active a {
+  color: #000;
+}
